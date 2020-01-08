@@ -699,6 +699,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3070296991787607447, guid: cb04ba43615e931429214e3c92c91527,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: AR-WithImageTarget
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb04ba43615e931429214e3c92c91527, type: 3}
 --- !u!4 &3124058210145129036 stripped
