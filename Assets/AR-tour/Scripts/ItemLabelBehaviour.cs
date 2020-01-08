@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemLabelBehaviour : MonoBehaviour {
 
-    public Text Label;
+    public Canvas CanvasLabel;
 
 	// Use this for initialization
 	void Start () {
@@ -14,16 +14,24 @@ public class ItemLabelBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Label.transform.LookAt(2* transform.position - Camera.main.transform.position);
+        CanvasLabel.transform.LookAt(Camera.main.transform.position);
         //TODO always turn the label to the Camera
 
     }
 
     public void UpdatePositionAndLabel(Transform labelPositionTransform, string label = "")
     {
-        gameObject.transform.SetParent(labelPositionTransform);
-        Label.text = label;
-        gameObject.transform.localPosition = new Vector3(0,-0.2f,0.3f);
-        print(label);
+        if(label != "")
+        {
+            gameObject.transform.SetParent(labelPositionTransform);
+            CanvasLabel.GetComponentInChildren<Text>().text = label;
+            gameObject.transform.localPosition = new Vector3(0,-0.2f,0.3f);
+            print(label);
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

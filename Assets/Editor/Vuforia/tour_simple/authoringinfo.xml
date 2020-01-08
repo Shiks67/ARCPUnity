@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="14.0" toolVersion="8.6.7">
+<ModelTarget name="tour_simple" targetId="6a5561b07512408885c95384a7966e6c" version="11.1" toolVersion="8.6.7" bbox="-1489.500000 -675.000000 -45.000000 1485.000000 675.000000 1270.013428" previewImage="6a5561b07512408885c95384a7966e6c_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="tour_simples_assembly" assemblyId="d5bd6a7d4b5e4a559fce5ec004d7b1b2">
+<Part name="tour_simple" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-69.4619 593.694 3689.29" rotation="AD: 0.9999999999998197 0.0007164765941442149 0.0010231428409391802 109.995" image="tour_simple_viewpoint_0000.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>

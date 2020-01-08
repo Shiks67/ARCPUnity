@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="tour_simple" motionHint="static"/>
+
+</Tracking>
+
+<Assembly name="tour_simples_assembly" assemblyId="d5bd6a7d4b5e4a559fce5ec004d7b1b2">
+<Part name="tour_simple" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-69.4619 593.694 3689.29" rotation="AD: 0.9999999999998197 0.0007164765941442149 0.0010231428409391802 109.995" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>

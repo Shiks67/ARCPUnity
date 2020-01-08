@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AR-tour/Scenes/AR-WithImageTarget.unity
     guid: 727755e9eed24824da937ba0f9619cce
+  - enabled: 1
+    path: Assets/AR-tour/Scenes/AR-WithModel3DTarget.unity
+    guid: f66d37850853edf4bbdffa4db7acc311
   m_configObjects: {}
