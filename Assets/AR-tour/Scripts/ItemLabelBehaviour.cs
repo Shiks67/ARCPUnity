@@ -23,7 +23,7 @@ public class ItemLabelBehaviour : MonoBehaviour {
     {
         gameObject.transform.SetParent(labelPositionTransform);
         Label.text = label;
-        gameObject.transform.localPosition = new Vector3(0,-.3f,0);
+        gameObject.transform.localPosition = new Vector3(0,-0.2f,0.3f);
         print(label);
     }
 }
