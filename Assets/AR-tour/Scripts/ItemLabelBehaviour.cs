@@ -14,14 +14,16 @@ public class ItemLabelBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Label.transform.LookAt(Camera.main.transform);
+        Label.transform.LookAt(2* transform.position - Camera.main.transform.position);
         //TODO always turn the label to the Camera
 
     }
 
     public void UpdatePositionAndLabel(Transform labelPositionTransform, string label = "")
     {
-        //TODO update position of the label and label value
-        
+        gameObject.transform.SetParent(labelPositionTransform);
+        Label.text = label;
+        gameObject.transform.localPosition = new Vector3(0,-.3f,0);
+        print(label);
     }
 }

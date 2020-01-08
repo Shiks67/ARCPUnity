@@ -15,7 +15,11 @@ public class CameraPlayPauseBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Add listener for when the state of the Toggle changes, to take action
+        CameraToggle.onValueChanged.AddListener(delegate
+        {
+            ToggleValueChanged();
+        });
     }
 
     // Update is called once per frame
@@ -26,29 +30,18 @@ public class CameraPlayPauseBehaviour : MonoBehaviour
 
     public void PlayPauseCamera(bool CameraIsOn)
     {
-        if(CameraIsOn)
+        print(CameraIsOn);
+        if (CameraIsOn)
         {
-            /*CameraDevice.Instance.Start();
-            ObjectTracker imgTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
-            imgTracker.Start();*/
-            Time.timeScale = 1;
-            ARCamera.clearFlags = previousClearFlags;
-            ARCamera.cullingMask = previousCullingMask;
+            CameraDevice.Instance.Start();
         }
         else
         {
-            /*CameraDevice.Instance.Stop();
-            ObjectTracker imgTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
-            imgTracker.Stop();*/
-            Time.timeScale = 0;
-            previousCullingMask = ARCamera.cullingMask;
-            previousClearFlags = ARCamera.clearFlags;
-            ARCamera.clearFlags = CameraClearFlags.Nothing;
-            ARCamera.cullingMask = 0;
+            CameraDevice.Instance.Stop();
         }
     }
 
-    public void ValueChanged()
+    public void ToggleValueChanged()
     {
         PlayPauseCamera(CameraToggle.isOn);
     }
